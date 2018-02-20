@@ -1,0 +1,69 @@
+<div class="price-entry">
+	<form name="SDLTForm" action="" onsubmit="return SDLTForm_Validator(this)" language="JavaScript">
+		<div align="center"><br>
+			<h4>Purchase Price</h4>
+			<input class="number" id="price_house" type="tel" maxlength="11" size="8" name="SDValue" placeholder="£">
+			<p>(Enter numbers only)</p>
+			<p><a class="link_cursor wpcf7-form-control wpcf7-submit" onclick="return getStampDutyOnHouse()">Calculate</a></p>					
+			<h3 class="textresult">
+			<div id="results">	
+			<br> 
+			</div>
+			</h3>															
+			<a class="link_cursor" onclick="show('sdltfull')">Show Full Calculation</a>						
+			<div id="sdltfull" style="display:none">	
+				<br><table id="TABLE1" class="gen-table">
+       				<thead>
+       					<tr>
+            			<td><big><strong>Effective Rate</strong></big></td>
+						<td><big><strong><div id="results-effective-rate"></div></strong></big></td> 
+            			</tr>
+       	 			</thead>
+											
+				</table>			
+			
+				<table id="TABLE1" class="gen-table">
+       			<thead>
+            		<tr class="odd"> 
+						<td><strong>Tax Band</strong></td>
+						<td><strong>%</strong></td>
+						<td><strong>Taxable Sum</strong></td>
+						<td><strong>Tax</strong></td>                     
+            		</tr>
+       	 		</thead>
+  					<tbody><tr>
+                    	<td>less than £125k</td>
+						<td>0</td>
+						<td><div id="results-taxsuma"></div></td>
+						<td><div id="results-sdltbanda"></div></td>
+  					</tr>
+ 					<tr class="odd">
+                		<td>£125k to £250k</td>
+						<td>2</td>
+						<td><div id="results-taxsumb"></div></td>
+						<td><div id="results-sdltbandb"></div></td> 
+  					</tr>
+  					<tr>
+               			<td>£250k to £925k</td>
+						<td>5</td>
+						<td><div id="results-taxsumc"></div></td>
+						<td><div id="results-sdltbandc"></div></td>
+  					</tr>
+  					<tr class="odd">
+                		<td>£925k to £1.5m</td>
+						<td>10</td>
+						<td><div id="results-taxsumd"></div></td>
+						<td><div id="results-sdltbandd"></div></td>
+  					</tr>
+  					<tr>
+                    	<td>rest over £1.5m</td>
+						<td>12</td>
+						<td><div id="results-taxsume"></div></td>
+						<td><div id="results-sdltbande"></div></td>
+  					</tr>
+				</tbody></table>
+              <a href="https://www.stampdutycalculator.org.uk/pdf/sdlt/pdf-sdlt-single-property.php" target="_top">Print PDF</a>
+			</div>
+		</div>
+	</form>
+</div>

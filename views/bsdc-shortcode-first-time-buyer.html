@@ -1,0 +1,74 @@
+<div class="price-entry">
+    <form name="SDLTFormBTL" action="" onsubmit="return SDLTFormBTL_Validator(this)" language="JavaScript">
+        <div align="center">
+            <br>
+            <h4>Purchase Price</h4>
+            <input class="number" id="price_house_ftb" type="tel" maxlength="11" size="8" name="SDValue" placeholder="£">
+            <p>(Enter numbers only)</p>
+            <p><a class="link_cursor wpcf7-form-control wpcf7-submit" onclick="return getStampDutyOnHouseFTB()">Calculate</a></a></p>
+            <h3 class="textresult">
+                <div id="results-ftb">
+                    <br>
+                </div>
+            </h3>
+            <a class="link_cursor" onclick="show('sdltftbfull')">Show Full Calculation</a>
+            <div id="sdltftbfull" style="display:none">
+                <br><table id="TABLE1" class="gen-table">
+                    <thead>
+                        <tr>
+                            <td><big><strong>Effective Rate</strong></big></td>
+                            <td><big><strong><div id="results-effective-rate-ftb"></div></strong></big></td>
+                        </tr>
+                    </thead>
+                    
+                </table>
+
+                <table id="TABLE1" class="gen-table">
+                    <thead>
+                        <tr class="odd">
+                            <td><strong>Tax Band</strong></td>
+                            <td><strong>%</strong></td>
+                            <td><strong>Taxable Sum</strong></td>
+                            <td><strong>Tax</strong></td>
+                        </tr>
+                    </thead>
+                    <tbody><tr>
+                        <td>less than £300k</td>
+                        <td>0(2/5)*</td>
+                        <td><div id="results-taxsuma-ftb"></div></td>
+                        <td><div id="results-sdltbanda-ftb"></div></td>
+                    </tr>
+                    <tr class="odd">
+                        <td>£300k to £500k</td>
+                        <td>5</td>
+                        <td><div id="results-taxsumb-ftb"></div></td>
+                        <td><div id="results-sdltbandb-ftb"></div></td>
+                    </tr>
+                    <tr>
+                        <td>£500k to £925k</td>
+                        <td>5</td>
+                        <td><div id="results-taxsumc-ftb"></div></td>
+                        <td><div id="results-sdltbandc-ftb"></div></td>
+                    </tr>
+                    <tr class="odd">
+                        <td>£925k to £1.5m</td>
+                        <td>10</td>
+                        <td><div id="results-taxsumd-ftb"></div></td>
+                        <td><div id="results-sdltbandd-ftb"></div></td>
+                    </tr>
+                    <tr>
+                        <td>rest over £1.5m</td>
+                        <td>12</td>
+                        <td><div id="results-taxsume-ftb"></div></td>
+                        <td><div id="results-sdltbande-ftb"></div></td>
+                    </tr>
+
+                </tbody></table>
+                <p><a href="https://www.stampdutycalculator.org.uk/pdf/sdlt/pdf-sdlt-first-time-buyer.php" target="_top">Print PDF</a></p>
+                <p>*For purchases over £500k, SDLT is charged at 2% from £125k to £250k and 5% from £250k to £925k.</p>
+            </div>
+
+        </div>
+
+    </form>
+</div>
